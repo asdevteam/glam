@@ -1,0 +1,51 @@
+uuid: 98228ae0-3e2e-4b36-a0c1-a117be1c1be7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c78f6380-9156-4554-aa53-78dc4e72be3a'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+    - system
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: hotdealandbestproducthome6_2
+theme: oshop
+region: content
+weight: -42
+provider: null
+plugin: 'block_content:c78f6380-9156-4554-aa53-78dc4e72be3a'
+settings:
+  id: 'block_content:c78f6380-9156-4554-aa53-78dc4e72be3a'
+  label: 'Hot Deal and Best Product Home 6'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

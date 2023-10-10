@@ -1,0 +1,55 @@
+uuid: f7f6db36-3928-419e-8c62-4cb7c14e6deb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.featured_visually_hidden
+    - field.field.paragraph.main_page_new_arrival.field_discription
+    - field.field.paragraph.main_page_new_arrival.field_featured
+    - field.field.paragraph.main_page_new_arrival.field_full_width_link
+    - field.field.paragraph.main_page_new_arrival.field_image_new_arrival
+    - paragraphs.paragraphs_type.main_page_new_arrival
+  module:
+    - image
+    - link
+id: paragraph.main_page_new_arrival.featured_visually_hidden
+targetEntityType: paragraph
+bundle: main_page_new_arrival
+mode: featured_visually_hidden
+content:
+  field_discription:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_featured:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image_new_arrival:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_full_width_link: true
+  search_api_excerpt: true

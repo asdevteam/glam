@@ -1,0 +1,39 @@
+uuid: e087acd9-e224-49f8-b9f6-b8dd8ae09959
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_header_style
+field_name: field_header_style
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: header1
+      label: 'Style 1'
+    -
+      value: header2
+      label: 'Style 2'
+    -
+      value: header3
+      label: 'Style 3'
+    -
+      value: header4
+      label: 'Style 4'
+    -
+      value: header5
+      label: 'Style 5'
+    -
+      value: header6
+      label: 'Style 6'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,17 @@
+uuid: 52f4a04b-2e99-43ec-aea1-6ef699bfd6ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: product_left_sidebar
+label: 'Product Left Sidebar'
+logic: and
+conditions:
+  8512d287-524d-492e-96ca-15e0c7fe9380:
+    id: request_path
+    pages: /node/2
+    negate: false
+    context_mapping: {  }
+    uuid: 8512d287-524d-492e-96ca-15e0c7fe9380
+allow_other_conditions: false

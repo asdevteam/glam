@@ -1,0 +1,45 @@
+<footer class="footer dark-bg">
+    <div class="primary-footer">
+        <div class="container">
+            <div class="row">
+                {{ page.footer}}
+
+            </div>
+            {{ page.logo_client }}
+            
+        </div>
+    </div>
+    <div class="secondary-footer text-center">
+        <div class="container">
+            <div class="copyright">
+            
+                    {{ page.copyrights }}
+              
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="color-customizer closed">
+    <div class="color-button">
+        <a class="opener" href="#"> <i class="fas fa-spinner fa-spin"></i>
+        </a>
+    </div>
+    <div class="clearfix color-chooser text-center">
+        {{ color_header|raw }}
+        <ul class="colorChange clearfix">
+            <li class="theme-default selected" title="theme-default" data-style="theme-default"></li>
+            <li class="theme-mediumseagreen" title="theme-mediumseagreen" data-style="theme-mediumseagreen"></li>
+            <li class="theme-orange" title="theme-orange" data-style="theme-orange"></li>
+            <li class="theme-blue" title="theme-blue" data-style="theme-blue"></li>
+            <li class="theme-yellow" title="theme-yellow" data-style="theme-yellow"></li>
+        </ul>
+        <div class="text-center mt-4">{{ color_footer|raw }}
+        </div>
+    </div>
+</div>
+
+<!--color-customizer end-->
+
+<!--back-to-top start-->
+
+<div id="scroll-top"><a class="top arrow" href="#top"><i class="fas fa-angle-double-up"></i></a></div>

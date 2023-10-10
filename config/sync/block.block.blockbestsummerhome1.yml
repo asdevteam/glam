@@ -1,0 +1,51 @@
+uuid: 8e9ac022-2f05-40ce-a309-a2e6a3b69c60
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_1
+  content:
+    - 'block_content:basic:2ec755d6-072e-4b56-8c11-ea8f6dfcafb9'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: enable
+    color: '#000000'
+    thumbnail_preview: ''
+    bg_image:
+      - '43'
+    bg_image_type: fixed
+    bg_repeat: 'yes'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: blockbestsummerhome1
+theme: oshop
+region: section
+weight: -30
+provider: null
+plugin: 'block_content:2ec755d6-072e-4b56-8c11-ea8f6dfcafb9'
+settings:
+  id: 'block_content:2ec755d6-072e-4b56-8c11-ea8f6dfcafb9'
+  label: 'Block Best Summer Home 1'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: home_1

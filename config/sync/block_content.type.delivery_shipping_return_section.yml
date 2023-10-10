@@ -1,0 +1,8 @@
+uuid: 73283c93-0ac9-47f2-bdbf-a13f90da0014
+langcode: en
+status: true
+dependencies: {  }
+id: delivery_shipping_return_section
+label: 'delivery shipping return section'
+revision: 0
+description: ''

@@ -1,0 +1,18 @@
+uuid: 7434a525-2b1e-4549-9174-d97451a98581
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: HomePage
+type: homepage
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

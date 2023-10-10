@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the completion message.
+ *
+ * Available variables:
+ * - order_entity: The order entity.
+ * - payment_instructions: The payment instructions, if provided.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="checkout-complete">
+<section class="text-center ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="mb-4">{{'Thank you for purchasing, Your order is complete'|t}}</h3>
+        <a class="btn btn-theme btn-circle" href="{{ path('<front>') }}"><span>Home</span></a>
+        <a class="btn btn-theme btn-iconic" href="{{ path('<front>') }}node/5"><span>Continue Shopping <i class="fas fa-shopping-cart"></i></span></a>      
+      </div>
+    </div>
+  </div>
+</section>
+
+  {% if payment_instructions %}
+    <div class="checkout-complete__payment-instructions">
+      <h2>{{ 'Payment instructions'|t }}</h2>
+      {{ payment_instructions }}
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,45 @@
+uuid: 5677f4b0-51d3-4e71-8d37-16bd4d4069d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.product_filter_sidebar_price
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: 'sidebar-filter widget'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: exposedformproduct_filter_sidebar_pricepage_filter_price
+theme: oshop
+region: shop_sidebar
+weight: -16
+provider: null
+plugin: 'views_exposed_filter_block:product_filter_sidebar_price-page_filter_price'
+settings:
+  id: 'views_exposed_filter_block:product_filter_sidebar_price-page_filter_price'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: Price
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''

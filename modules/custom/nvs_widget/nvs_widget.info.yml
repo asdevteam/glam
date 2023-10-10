@@ -1,0 +1,7 @@
+name: Naviteam Widget
+description: Provide custom widget such as twitter,flickr, latest work...
+core_version_requirement: ^8.8 || ^9
+package: NaviSystem
+dependencies:
+- block
+type: module

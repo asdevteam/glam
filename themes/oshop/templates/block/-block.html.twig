@@ -1,0 +1,45 @@
+{% if region == 'section' %}
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h3{{ title_attributes }}>{{ label }}</h3>
+    {% endif %}
+    {{ title_suffix }}
+    {% if content %}
+      {{ content }}
+    {% endif %}
+  </div>
+{% elseif region == 'shop_sidebar' %}
+    <div{{ attributes.addClass('widget','position-re') }}>
+      {{ title_prefix }}
+      {% if label %}
+        <h5 class="widget-title">{{ label }}</h5>
+      {% endif %}
+      {{ title_suffix }}
+      {% if content %}
+        {{ content }}
+      {% endif %}
+    </div>
+{% elseif region == 'footer' %}
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h5{{ title_attributes }}>{{ label }}</h5>
+    {% endif %}
+    {{ title_suffix }}
+    {% if content %}
+      {{ content }}
+    {% endif %}
+  </div>
+{% else %}
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h3{{ title_attributes }}>{{ label }}</h3>
+    {% endif %}
+    {{ title_suffix }}
+    {% if content %}
+      {{ content }}
+    {% endif %}
+  </div>
+{% endif %}

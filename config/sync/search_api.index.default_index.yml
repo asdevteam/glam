@@ -1,0 +1,227 @@
+uuid: 1164d9c7-59fe-4b29-8e61-72b82eb1f20c
+langcode: en
+status: true
+dependencies:
+  config:
+    0: field.storage.commerce_product.field_additional_information
+    1: field.storage.commerce_product.field_categories
+    2: field.storage.commerce_product.field_image
+    3: field.storage.commerce_product.field_old
+    5: search_api.server.default_server
+  module:
+    - commerce_product
+    - search_api
+_core:
+  default_config_hash: GLmLegZGHtMF6annRqgjizJAoiAip-IT-XOsDMCZfog
+id: default_index
+name: 'Default content index'
+description: 'Default content index created by the Database Search Defaults module'
+read_only: false
+field_settings:
+  changed:
+    label: Changed
+    datasource_id: 'entity:commerce_product'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - commerce_product
+  created:
+    label: Created
+    datasource_id: 'entity:commerce_product'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - commerce_product
+  field_additional_information:
+    label: 'ADDITIONAL INFORMATION'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_additional_information
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_additional_information
+  field_categories:
+    label: Categories
+    datasource_id: 'entity:commerce_product'
+    property_path: field_categories
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_categories
+  field_image:
+    label: Image
+    datasource_id: 'entity:commerce_product'
+    property_path: field_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_image
+  number:
+    label: 'Old Price » Number'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'field_old:number'
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_old
+  product_id:
+    label: ID
+    datasource_id: 'entity:commerce_product'
+    property_path: product_id
+    type: integer
+    dependencies:
+      module:
+        - commerce_product
+  rendered_item:
+    label: 'Rendered item'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          article: search_index
+          page: search_index
+  title:
+    label: Title
+    datasource_id: 'entity:commerce_product'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+  uid:
+    label: Author
+    datasource_id: 'entity:commerce_product'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - commerce_product
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+  variations:
+    label: Variations
+    datasource_id: 'entity:commerce_product'
+    property_path: variations
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.variations
+datasource_settings:
+  'entity:commerce_product':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url:
+    weights:
+      preprocess_index: -30
+  aggregated_field:
+    weights:
+      add_properties: 20
+  entity_status:
+    weights:
+      preprocess_index: -10
+  html_filter:
+    weights:
+      preprocess_index: -3
+      preprocess_query: -6
+    fields:
+      - rendered_item
+    title: true
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      string: 2
+    all_fields: false
+  ignorecase:
+    weights:
+      preprocess_index: -5
+      preprocess_query: -8
+    fields:
+      - rendered_item
+    all_fields: false
+  rendered_item:
+    weights:
+      add_properties: 0
+      pre_index_save: -10
+  stopwords:
+    weights:
+      postprocess_query: -10
+      preprocess_query: -10
+    fields:
+      - rendered_item
+    stopwords:
+      - a
+      - an
+      - and
+      - are
+      - as
+      - at
+      - be
+      - but
+      - by
+      - for
+      - if
+      - in
+      - into
+      - is
+      - it
+      - 'no'
+      - not
+      - of
+      - 'on'
+      - or
+      - s
+      - such
+      - t
+      - that
+      - the
+      - their
+      - then
+      - there
+      - these
+      - they
+      - this
+      - to
+      - was
+      - will
+      - with
+    all_fields: false
+  tokenizer:
+    weights:
+      preprocess_index: -2
+      preprocess_query: -5
+    fields:
+      - rendered_item
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    all_fields: false
+  transliteration:
+    weights:
+      preprocess_index: -4
+      preprocess_query: -7
+    fields:
+      - rendered_item
+    all_fields: false
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+  track_changes_in_references: true
+server: default_server

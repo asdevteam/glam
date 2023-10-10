@@ -1,0 +1,15 @@
+
+<div class="media-holder review-list">
+<div class="media">
+	<div class="col-md-1 pr-0 img-center2 image-br-50 rounded-circle mr-3">
+		 {{ user_picture }}									
+	</div>
+	<div class="col-md-11 col-xs-12">
+		<div class="media-body">
+			{{ author }} <strong>  {{ comment.created.value|date('F d, Y') }}</strong>
+				<p>{{ content.field_comment_body }}</p>
+				 {{ content.links }}
+		</div>
+	</div>								
+</div>
+</div>

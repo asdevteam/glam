@@ -1,0 +1,172 @@
+uuid: 5ae9c099-d048-4a69-9253-af13f6afd1a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - search_api
+  config:
+    0: field.storage.commerce_product.body
+    1: field.storage.commerce_product.field_categories
+    3: field.storage.commerce_product.field_product_comment
+    5: field.storage.commerce_product.field_voting
+    6: search_api.server.product_sv
+id: product_index
+name: 'product Index'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:commerce_product'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.commerce_product.body
+  created:
+    label: Created
+    datasource_id: 'entity:commerce_product'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - commerce_product
+  field_categories:
+    label: Categories
+    datasource_id: 'entity:commerce_product'
+    property_path: field_categories
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_categories
+  field_product_comment:
+    label: 'Product Comment'
+    datasource_id: 'entity:commerce_product'
+    property_path: field_product_comment
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_product_comment
+  field_voting:
+    label: Voting
+    datasource_id: 'entity:commerce_product'
+    property_path: field_voting
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_voting
+  number:
+    label: Price
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:price:number'
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.variations
+      module:
+        - commerce_product
+        - commerce_product
+  number_1:
+    label: 'Price » Number'
+    datasource_id: 'entity:commerce_product_variation'
+    property_path: 'price:number'
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+  product_id:
+    label: ID
+    datasource_id: 'entity:commerce_product'
+    property_path: product_id
+    type: integer
+    dependencies:
+      module:
+        - commerce_product
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        - anonymous
+      view_mode: {  }
+  stores:
+    label: Stores
+    datasource_id: 'entity:commerce_product'
+    property_path: stores
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.stores
+  title:
+    label: Title
+    datasource_id: 'entity:commerce_product'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+  type:
+    label: 'Product type'
+    datasource_id: 'entity:commerce_product'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+  uid:
+    label: Author
+    datasource_id: 'entity:commerce_product'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - commerce_product
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+  uuid:
+    label: UUID
+    datasource_id: 'entity:commerce_product'
+    property_path: uuid
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+  variations:
+    label: Variations
+    datasource_id: 'entity:commerce_product'
+    property_path: variations
+    type: integer
+    dependencies:
+      config:
+        - field.storage.commerce_product.variations
+datasource_settings:
+  'entity:commerce_product':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:commerce_product_variation':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+  track_changes_in_references: true
+server: product_sv

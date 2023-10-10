@@ -1,0 +1,46 @@
+uuid: af87e772-6c4e-4d8c-b6d3-954643b095e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.test
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: views_block__test_shop_categories_sidebar_
+theme: oshop
+region: shop_sidebar
+weight: -17
+provider: null
+plugin: 'views_block:test-shop_categories_sidebar_'
+settings:
+  id: 'views_block:test-shop_categories_sidebar_'
+  label: Categories
+  label_display: visible
+  provider: views
+  views_label: Categories
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''

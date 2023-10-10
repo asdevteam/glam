@@ -1,0 +1,11 @@
+{% block content %}
+	<div{{ attributes.addClass('navbar-logo') }}>
+		{{ title_prefix }}
+        {% if label %}
+            {{ label }}
+        {% endif %}
+        {{ title_suffix }} 	  	
+		<a href="{{ path('<front>') }}"><img src="{{ site_logo }}" id="logo" alt="{{ 'Logo'|t }}"></a>
+		{% if site_name %}{{ site_name }}{% endif %}
+	</div>
+{% endblock %}

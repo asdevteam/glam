@@ -1,0 +1,8 @@
+uuid: c7b27a7d-f68b-405c-919c-97fa1922f5d2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Shop Categories Technology'
+vid: shop_categories_technology
+description: ''
+weight: 0

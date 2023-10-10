@@ -1,0 +1,78 @@
+<div id="oshop-map" class="oshop-map hidden" data-lat="{{ node.field_latitude.value|raw }}" data-lag="{{ node.field_longitude.value|raw }}"></div>
+{% if contact_layout == "style1" %}
+<section class="pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="text-black form-info white-bg text-center box-shadow">
+          <ul class="contact-info list-inline d-flex flex-md-row flex-column justify-content-between align-items-between">
+            <li>
+              <i class="flaticon-location "></i><span>{{ content.field_address['#title'] }}:</span>
+              <p>{{ node.field_address.value }}</p>
+              <span class="contact-icon"><i class="flaticon-location"></i></span>
+            </li>
+            <li class="theme-bg text-white"><i class="flaticon-call"></i><span>{{ content.field_phone['#title'] }}:</span> {{ node.field_phone.value|raw}} 
+              <span class="contact-icon"><i class="flaticon-call"></i></span>
+            </li>
+            <li><i class="flaticon-email"></i><span>{{content.field_email['#title']}}</span>
+                {{ node.field_email.value|raw}}
+              <span class="contact-icon"><i class="flaticon-email"></i></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--address end-->
+<!--contact start-->
+<section class="contact-1">
+  <div class="container">
+    <div class="row row-eq-height no-gutters">
+      <div class="col-lg-8 col-md-12 order-lg-12">
+        <div class="contact-main white-bg">
+          {{ node.field_title_full.value|raw }}
+          {{ content.webform}}
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 order-lg-1">
+        <div id="map" class="h-100 iframe-h-m"></div>
+      </div>
+    </div>
+  </div>
+</section>
+{% else  %}
+    <section class="contact-2 o-hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12">
+            <div class="text-black form-info white-bg text-center box-shadow">
+              <ul class="contact-info list-unstyled">
+                <li>
+                <i class="flaticon-location "></i><span>{{ content.field_address['#title'] }}:</span>
+                <p>{{ node.field_address.value }}</p>
+                <span class="contact-icon"><i class="flaticon-location"></i></span>
+                </li>
+                <li class="theme-bg text-white"><i class="flaticon-call"></i><span>{{ content.field_phone['#title'] }}:</span> {{ node.field_phone.value|raw}} 
+                <span class="contact-icon"><i class="flaticon-call"></i></span>
+                </li>
+                <li><i class="flaticon-email"></i><span>{{content.field_email['#title']}}</span>
+                {{ node.field_email.value|raw}}
+                <span class="contact-icon"><i class="flaticon-email"></i></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-12 md-mt-5">
+            <div class="contact-main white-bg">
+              {{ node.field_title_full.value|raw }}
+              {{ content.webform}}
+            </div>
+            <div id="map" class="iframe-h iframe-h-m"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+        <!--contact end-->
+        <!--newsletter start--> 
+{% endif %}

@@ -1,0 +1,17 @@
+uuid: 76629cff-3393-45bf-a42f-912446d231c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: product_sv
+name: 'Product SV'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

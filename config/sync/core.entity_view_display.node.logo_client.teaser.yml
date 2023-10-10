@@ -1,0 +1,30 @@
+uuid: c36807be-ab38-45f2-bf06-a08d64be36fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.logo_client.body
+    - node.type.logo_client
+  module:
+    - text
+    - user
+id: node.logo_client.teaser
+targetEntityType: node
+bundle: logo_client
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

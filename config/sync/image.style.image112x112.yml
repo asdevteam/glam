@@ -1,0 +1,15 @@
+uuid: cd60cd01-223e-4770-b4ab-1692a16586a2
+langcode: en
+status: true
+dependencies: {  }
+name: image112x112
+label: image112x112
+effects:
+  398710b1-361a-4645-bc9e-9bc0a7d046f6:
+    uuid: 398710b1-361a-4645-bc9e-9bc0a7d046f6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 112
+      height: 112
+      anchor: center-center

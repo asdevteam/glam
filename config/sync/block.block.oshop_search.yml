@@ -1,0 +1,23 @@
+uuid: b319f1d5-0a90-4f74-912d-6cd7647ac24e
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - oshop
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: oshop_search
+theme: oshop
+region: hiden_block
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: visible
+  provider: search
+  page_id: ''
+visibility: {  }

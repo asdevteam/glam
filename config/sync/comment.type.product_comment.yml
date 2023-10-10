@@ -1,0 +1,8 @@
+uuid: d0417474-4546-4225-baaa-f3c1b669edb8
+langcode: en
+status: true
+dependencies: {  }
+id: product_comment
+label: 'Product Comment'
+target_entity_type_id: commerce_product
+description: ''

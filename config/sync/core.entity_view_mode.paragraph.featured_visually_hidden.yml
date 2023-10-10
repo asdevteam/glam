@@ -1,0 +1,10 @@
+uuid: b66a6508-8267-464c-b534-ff53b7a38083
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.featured_visually_hidden
+label: 'featured visually hidden'
+targetEntityType: paragraph
+cache: true

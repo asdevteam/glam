@@ -1,0 +1,21 @@
+uuid: 144a59ae-a1a4-4a9e-adde-793712d2d933
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.webform
+  module:
+    - text
+id: node.webform.field_email
+field_name: field_email
+entity_type: node
+bundle: webform
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

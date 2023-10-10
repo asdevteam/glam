@@ -1,0 +1,10 @@
+uuid: 12a6e9e5-5a92-4515-9a45-92199c9dd471
+langcode: en
+status: true
+dependencies: {  }
+id: main_page_new_arrival
+label: 'main page new arrival'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

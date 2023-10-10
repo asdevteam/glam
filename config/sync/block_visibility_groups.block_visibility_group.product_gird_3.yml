@@ -1,0 +1,17 @@
+uuid: 3f120add-ed3d-41ad-9b90-8c566d741235
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: product_gird_3
+label: 'Product Gird 3'
+logic: and
+conditions:
+  af759598-0feb-49c1-aca3-2a39a5ec3b79:
+    id: request_path
+    pages: /node/4
+    negate: false
+    context_mapping: {  }
+    uuid: af759598-0feb-49c1-aca3-2a39a5ec3b79
+allow_other_conditions: false

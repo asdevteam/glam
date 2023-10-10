@@ -1,0 +1,23 @@
+uuid: 4f548635-91a3-4946-b317-f4cb057bde13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.owl_carousel
+  module:
+    - text
+id: node.owl_carousel.body
+field_name: body
+entity_type: node
+bundle: owl_carousel
+label: body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

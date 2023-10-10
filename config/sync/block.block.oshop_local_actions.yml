@@ -1,0 +1,20 @@
+uuid: 2f6c911c-3b38-4b8d-9a42-9a254811aca5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - oshop
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: oshop_local_actions
+theme: oshop
+region: hiden_block
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

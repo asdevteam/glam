@@ -1,0 +1,29 @@
+uuid: ef39382c-0e46-4702-860f-71745883604d
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.technology
+    - field.storage.commerce_product.field_categories
+    - taxonomy.vocabulary.shop_categories_technology
+id: commerce_product.technology.field_categories
+field_name: field_categories
+entity_type: commerce_product
+bundle: technology
+label: Categories
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      shop_categories_technology: shop_categories_technology
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

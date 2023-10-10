@@ -1,0 +1,150 @@
+{% set img_uri = product_entity.field_image.entity.uri.value %}
+{% set img_url = file_url(img_uri) %}
+{% set img_arr = product_entity.field_image %}
+{% set img_alt = product_entity.field_image.alt %}
+
+{% set comment_count =  product_entity.field_product_comment.comment_count %}
+{% if comment_count <= 0  %}
+{% set comment_count = 0 %}
+{% endif %}
+{% set image112x112 = getUrlByImageStyle(img_uri, 'image112x112')  %}
+{% set image458x611 = getUrlByImageStyle(img_uri, 'image458x611')  %}
+
+{% if shop_detail == 'style1' %}
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-12">
+        <div class="slick3">
+          {% if img_arr|length > 1 %}
+            {% for i, img_item in img_arr %}
+              {% set imguri = img_item.entity.uri.value %}
+              {% set image112x112 = getUrlByImageStyle(imguri, 'image112x112') %}
+              {% set image458x611 = getUrlByImageStyle(imguri, 'image458x611')  %}
+              <div class="item-slick3" data-thumb="{{ image112x112 }}">
+                <img class="img-fluid w-100" src="{{ image458x611 }}" alt="{{ product.title }}">
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+        <div class="slick3-dots-main"></div>
+      </div>
+      <div class="col-lg-7 col-md-12 md-mt-5">
+        <div class="product-details">
+          <h4>
+            {{ product.title }}
+          </h4>
+          <div class="product-price my-4"> <span class="mr-3"> {{ product.variation_price }} <del>{{ product.field_old }}</del></span>
+            <span class="review-rating">
+              {{ product.field_voting }}
+            </span>
+          </div>
+          <ul class="portfolio-meta list-unstyled mb-4">
+            <li class="mb-2"><span> SKU: </span> {{ product.variation_sku }}</li>
+            <li><span> {{ product.field_categories['#title'] }} :</span> {{ product.field_categories }}</li>
+          </ul>
+          <p>{{ product_entity.body.summary }}</p>
+        
+          <div class="row my-4 fix-variations addbtn-theme addbtn">
+              {{ product.variations }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% else %}
+     <section>
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6 col-md-12">
+                <div class="row">
+                  <div class="col-sm-9 order-sm-12">
+                    <div class="slick3">
+                        {% if img_arr|length > 1 %}
+                          {% for i, img_item in img_arr %}
+                            {% set imguri = img_item.entity.uri.value %}
+                            {% set image112x112 = getUrlByImageStyle(imguri, 'image112x112') %}
+                            {% set image458x611 = getUrlByImageStyle(imguri, 'image458x611')  %}
+                            <div class="item-slick3" data-thumb="{{ image112x112 }}">
+                              <img class="img-fluid w-100" src="{{ image458x611 }}" alt="{{ product.title }}">
+                            </div>
+                          {% endfor %}
+                        {% endif %}
+                    </div>
+                  </div>
+                  <div class="col-sm-3 order-sm-1">
+                    <div class="slick3-dots-main product-details2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 md-mt-5">
+                <div class="product-details">
+                  <h4>
+                     {{ product.title }}
+                  </h4>
+                    <div class="product-price my-4"> <span class="mr-3"> {{ product.variation_price }} <del>{{ product.field_old }}</del></span>
+                    </div>
+                    <p>{{ product_entity.body.summary }}</p>
+                  <div class="row my-4 fix-variations">{{ product.variations}}
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+{% endif %}
+
+<!--tab start-->
+<section class="grey-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tab {% if shop_detail != 'style1'%} text-center {% endif %}">
+          <!-- Nav tabs -->
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist"> <a class="nav-item nav-link active" id="nav-tab1" data-toggle="tab" href="#tab3-1" role="tab" aria-selected="true">{{ 'Description'|t }}</a>
+              <a class="nav-item nav-link" id="nav-tab2" data-toggle="tab" href="#tab3-2" role="tab" aria-selected="false">{{ product.field_additional_information['#title'] }}</a>
+              <a class="nav-item nav-link" id="nav-tab3" data-toggle="tab" href="#tab3-3" role="tab" aria-selected="false"> {{'Reviews'|t}} ({{ comment_count }})</a>
+            </div>
+          </nav>
+          <!-- Tab panes -->
+          <div class="tab-content {% if shop_detail != 'style1'%} text-left {% endif %}">
+            <div role="tabpanel" class="tab-pane fade show active" id="tab3-1">
+             {{ product.body }}
+            </div>
+            <div role="tabpanel" class="tab-pane fade {% if shop_detail != 'style1'%} text-left {% endif %}" id="tab3-2">
+              {{ product.field_additional_information }}
+            </div>
+            <div role="tabpanel" class="tab-pane fade update-cmt {% if shop_detail != 'style1'%} text-left {% endif %}" id="tab3-3">
+              {{ product.field_product_comment  }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--tab end-->
+<!--product start-->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mr-auto">
+        <div class="section-title">
+          <h2 class="title">{{'Related'|t}} <span>{{'Products'|t}}</span></h2>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        
+           {#{ drupal_view('shop_related_products', 'shop_related_products_',product.field_categories.0['#options'].entity.tid.value) }#}
+          {{ drupal_view('relate_product_api', 'relate_product_api_',product.field_categories.0['#options'].entity.tid.value) }}
+      
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+uuid: a7699ece-20dc-4f67-85c3-db1389a51fb9
+langcode: en
+status: true
+dependencies: {  }
+id: technology
+label: Technology
+description: ''
+variationType: default
+injectVariationFields: true
+traits: {  }
+locked: false

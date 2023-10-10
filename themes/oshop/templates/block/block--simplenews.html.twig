@@ -1,0 +1,21 @@
+<div{{ attributes }}>
+    <div class="container simple-new">
+      <div class="row">
+         
+            {{ title_prefix }}
+             {% if label %}
+             <div class="col-lg-4 col-md-12 ">
+                <h2 class = "title"{{ title_attributes }}>{{ label }}<span>{{ sub_title }}</span></h2>
+              </div>
+             {% endif %}
+             {{ title_suffix }}
+    {% if content %}
+  
+    <div class="col-lg-8 col-md-12 ">
+      {{ content }}
+ 
+    </div>
+    {% endif %}
+  </div>
+    </div>
+  </div>

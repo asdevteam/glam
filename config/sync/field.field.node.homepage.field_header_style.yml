@@ -1,0 +1,21 @@
+uuid: 6b7156de-0ca8-4acb-8099-407c60111a29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_style
+    - node.type.homepage
+  module:
+    - options
+id: node.homepage.field_header_style
+field_name: field_header_style
+entity_type: node
+bundle: homepage
+label: 'Header Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

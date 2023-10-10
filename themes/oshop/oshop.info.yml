@@ -1,0 +1,53 @@
+name: oshop
+type: theme
+description: 'oshop - Construction HTML Template'
+core_version_requirement: ^8 || ^9
+base theme: classy
+screenshot: screenshot.png
+libraries:
+  - oshop/oshop-lib
+stylesheets-remove:
+  - core/themes/stable/css/views/views.module.css
+  - core/themes/stable/css/system/components/align.module.css
+  - core/assets/vendor/normalize-css/normalize.css
+  - core/modules/system/css/system.module.css
+  - core/modules/system/css/system.theme.css
+  - core/modules/views/css/views.module.css
+  - core/themes/stable/css/system/components/progress.module.css
+  - core/themes/classy/css/components/menu.css
+
+regions:
+  #header
+  header: 'Header'
+  user_account_menu: 'User Account Menu'
+  search_header: 'Search Header Menu'
+  main_menu: 'Main menu'
+  account_menu: 'Account Menu'
+  categories_menu: 'Categories Menu'
+  logo: 'Logo'
+  soc_network: 'Social NetWork'
+  cart_block: 'Cart Block'
+  search_page: 'Search Page'
+  breadcrumb: 'breadcrumb'
+  slide: 'silde'
+  #content
+  content: 'Main content'
+  ##sidebar
+  blog_sidebar: 'Blog Siderbar'
+
+  shop_sidebar: 'Shop SiderBar'
+  
+  service_sidebar: 'Services Sidebar '
+  #site_branding
+  site_branding: 'Site Branding'
+  #section
+  section: 'section content'
+ 
+  #footer
+  newsletter: 'Newsletter'
+  logo_client: 'Logo Client'
+  footer: 'Footer'
+
+  copyrights: 'copyrights footer'
+  #hiden
+  hiden_block: 'Hiden Block'

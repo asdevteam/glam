@@ -1,0 +1,17 @@
+uuid: 1202c413-7895-48d4-91e8-ac72107ef7ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: product_gird_2
+label: 'Product Gird 2'
+logic: and
+conditions:
+  505a62f2-8ec7-4e1c-892c-ac06362db139:
+    id: request_path
+    pages: /node/3
+    negate: false
+    context_mapping: {  }
+    uuid: 505a62f2-8ec7-4e1c-892c-ac06362db139
+allow_other_conditions: false

@@ -1,0 +1,19 @@
+uuid: 9fbe0e12-32d1-4db4-816f-2cd751e588ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.main_page_new_arrival_section
+    - field.storage.block_content.field_title
+id: block_content.main_page_new_arrival_section.field_title
+field_name: field_title
+entity_type: block_content
+bundle: main_page_new_arrival_section
+label: title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

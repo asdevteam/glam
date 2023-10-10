@@ -1,0 +1,49 @@
+uuid: a4155c34-3205-455f-9e86-a2f1b7999201
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_4
+  content:
+    - 'block_content:basic:003a14e0-b0fe-414f-b9e7-c4e58e05c13f'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: hotdealofweekhome4
+theme: oshop
+region: section
+weight: -8
+provider: null
+plugin: 'block_content:003a14e0-b0fe-414f-b9e7-c4e58e05c13f'
+settings:
+  id: 'block_content:003a14e0-b0fe-414f-b9e7-c4e58e05c13f'
+  label: 'Hot Deal of week Home 4'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: home_4

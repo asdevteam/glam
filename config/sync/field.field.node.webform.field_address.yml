@@ -1,0 +1,21 @@
+uuid: 65b95b15-7cea-41b8-addd-4364a36923cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.webform
+  module:
+    - text
+id: node.webform.field_address
+field_name: field_address
+entity_type: node
+bundle: webform
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

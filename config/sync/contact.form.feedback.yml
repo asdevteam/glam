@@ -1,0 +1,14 @@
+uuid: 51b82292-369b-4a5f-b029-2ff1490b7ecc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - admin@oshop.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

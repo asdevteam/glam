@@ -1,0 +1,17 @@
+uuid: 8be4758a-746e-4f17-a39d-c1315c41f13f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: blog_masonry
+label: 'Blog masonry'
+logic: and
+conditions:
+  9c57de03-57bc-4c08-afc0-1a9dde718bac:
+    id: request_path
+    pages: /node/7
+    negate: false
+    context_mapping: {  }
+    uuid: 9c57de03-57bc-4c08-afc0-1a9dde718bac
+allow_other_conditions: false

@@ -1,0 +1,22 @@
+uuid: a205ca62-a7ae-4b26-be97-032315a25235
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - oshop
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: oshop_powered
+theme: oshop
+region: hiden_block
+weight: -3
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

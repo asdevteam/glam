@@ -1,0 +1,44 @@
+uuid: b7e0ba86-50e7-4f5d-8d6a-53595a87bafc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.delivery_shipping_return.field_discription_long
+    - field.field.paragraph.delivery_shipping_return.field_image_new_arrival
+    - field.field.paragraph.delivery_shipping_return.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.delivery_shipping_return
+  module:
+    - image
+id: paragraph.delivery_shipping_return.default
+targetEntityType: paragraph
+bundle: delivery_shipping_return
+mode: default
+content:
+  field_discription_long:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image_new_arrival:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

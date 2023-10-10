@@ -1,0 +1,93 @@
+oshop-lib:
+  version: VERSION
+  css:
+    theme:
+      css/bootstrap.min.css: { preprocess: 0, minified: true }
+      ### animate -->
+      css/animate.css: { preprocess: 0, minified: true }
+      ### fontawesome -->
+      css/fontawesome-all.css: { preprocess: 0, minified: true }
+      ### themify-icons -->
+      css/themify-icons.css: { preprocess: 0, minified: true }
+      ### magnific-popup -->
+      css/magnific-popup/magnific-popup.css: { preprocess: 0, minified: true }
+      ### jquery-ui -->
+      css/jquery-ui.css: { preprocess: 0, minified: true }
+      ### owl-carousel -->
+      css/owl-carousel/owl.carousel.css: { preprocess: 0, minified: true }
+      ### slit-slider -->
+      css/slit-slider/slit-slider.css: { preprocess: 0, minified: true }
+      ### slick-slider -->
+      css/slick-slider/slick.css: { preprocess: 0, minified: true }
+      ### nice-select -->
+      #css/nice-select.css: { preprocess: 0, minified: true }
+      ### base -->
+      css/base.css: { preprocess: 0, minified: true }
+      ### default-theme -->
+      css/default-theme.css: { preprocess: 0, minified: true }
+      ### responsive -->
+      css/responsive.css: { preprocess: 0, minified: true }
+      ### color-customizer -->
+      #" data-style="styles" rel="stylesheet">
+      css/color-customize/color-customizer.css: { preprocess: 0, minified: true }
+      #update css
+      css/update.css: { preprocess: 0, minified: true }
+      #custom css
+      css/custom.css: { preprocess: 0, minified: true }
+  js:
+    js/update.js: { preprocess: 0, minified: true }
+    #js/jquery.3.3.1.min.js: { preprocess: 0, minified: true }
+    # popper -->
+    js/popper.min.js: { preprocess: 0, minified: true }
+    # bootstrap -->
+    js/bootstrap.min.js: { preprocess: 0, minified: true }
+    # appear -->
+    js/jquery.appear.js: { preprocess: 0, minified: true } 
+    # modernizr -->
+    js/modernizr.js: { preprocess: 0, minified: true } 
+    # nice-select -->
+    js/jquery.nice-select.js: { preprocess: 0, minified: true }
+    # jquery-ui --> 
+    js/jquery-ui.js: { preprocess: 0, minified: true }
+    # search --> 
+    js/search.js: { preprocess: 0, minified: true }
+    # menu -->
+    js/menu/jquery.smartmenus.js: { preprocess: 0, minified: true } 
+    # magnific-popup -->
+    js/magnific-popup/jquery.magnific-popup.min.js: { preprocess: 0, minified: true } 
+    # owl-carousel -->
+    js/owl-carousel/owl.carousel.min.js: { preprocess: 0, minified: true } 
+    # slit-slider -->
+    js/slit-slider/jquery.ba-cond.min.js: { preprocess: 0, minified: true }
+    js/slit-slider/jquery.slitslider.js: { preprocess: 0, minified: true }
+    # slick-slider -->
+    js/slick-slider/slick.js: { preprocess: 0, minified: true } 
+    # jarallax -->
+    js/jarallax/jarallax.min.js: { preprocess: 0, minified: true } 
+    # countdown -->
+    js/countdown/jquery.countdown.min.js: { preprocess: 0, minified: true } 
+    # isotope -->
+    js/isotope/isotope.pkgd.min.js: { preprocess: 0, minified: true } 
+    # contact-form -->
+    js/contact-form/contact-form.js: { preprocess: 0, minified: true }
+    # validate -->
+    js/contact-form/jquery.validate.min.js: { preprocess: 0, minified: true }
+    # map api -->
+    # https://maps.googleapis.com/maps/api/js?: { preprocess: 0, minified: true }
+    # map -->
+    #js/map.js: { preprocess: 0, minified: true }
+    # wow -->
+    js/wow.min.js: { preprocess: 0, minified: true }
+    # color-customize -->
+    js/color-customize/color-customizer.js: { preprocess: 0, minified: true } 
+    # theme-script -->
+    js/theme-script.js: { preprocess: 0, minified: true }
+   
+  dependencies :
+    - core/jquery
+    - core/drupalSettings
+admin-lib:
+  version: VERSION
+  css:
+    theme:
+      css/admin.css: { preprocess: 0, minified: true }

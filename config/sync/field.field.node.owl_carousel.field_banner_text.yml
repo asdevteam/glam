@@ -1,0 +1,23 @@
+uuid: ee4b6704-f7b8-4cbe-a55d-b8b3e5ff8a3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_text
+    - node.type.owl_carousel
+  module:
+    - text
+id: node.owl_carousel.field_banner_text
+field_name: field_banner_text
+entity_type: node
+bundle: owl_carousel
+label: 'banner text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

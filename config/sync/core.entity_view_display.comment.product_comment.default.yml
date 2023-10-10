@@ -1,0 +1,27 @@
+uuid: edc17b29-53ec-40e2-a8cc-e3aab19a5dfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.product_comment
+    - field.field.comment.product_comment.comment_body
+    - field.field.comment.product_comment.field_comment_body
+id: comment.product_comment.default
+targetEntityType: comment
+bundle: product_comment
+mode: default
+content:
+  field_comment_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment_body: true

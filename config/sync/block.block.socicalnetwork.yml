@@ -1,0 +1,47 @@
+uuid: cb5227af-b6ba-4a44-bd5a-a20eaba4531f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:da3e798a-0b8f-411c-a0e5-90e057517752'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: social-icons
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: socicalnetwork
+theme: oshop
+region: soc_network
+weight: 0
+provider: null
+plugin: 'block_content:da3e798a-0b8f-411c-a0e5-90e057517752'
+settings:
+  id: 'block_content:da3e798a-0b8f-411c-a0e5-90e057517752'
+  label: 'Socical Network'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''

@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: en
+uuid: 940795a3-7133-4d07-8741-ef592578bd85
+name: GroceryGlam
+mail: info@groceryglam.com
+slogan: ''
+page:
+  403: /node/20
+  404: /node/20
+  front: /node/36
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

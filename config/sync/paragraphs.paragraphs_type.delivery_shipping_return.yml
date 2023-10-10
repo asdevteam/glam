@@ -1,0 +1,10 @@
+uuid: f67159fd-09ed-4f9a-903a-7b28ca50d025
+langcode: en
+status: true
+dependencies: {  }
+id: delivery_shipping_return
+label: 'delivery shipping return'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

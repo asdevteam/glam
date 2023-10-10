@@ -1,0 +1,19 @@
+uuid: 47fa41d4-46ad-4046-9b58-4894f037368d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.main_page_new_arrival_section
+    - field.storage.block_content.field_title_2
+id: block_content.main_page_new_arrival_section.field_title_2
+field_name: field_title_2
+entity_type: block_content
+bundle: main_page_new_arrival_section
+label: 'title 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

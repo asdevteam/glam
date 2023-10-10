@@ -1,0 +1,10 @@
+uuid: 00483b37-5e40-4111-8642-10e0ad67a58a
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.product_form_2
+label: 'Product Form 2'
+targetEntityType: commerce_product
+cache: true

@@ -1,0 +1,23 @@
+uuid: 18c1a380-9769-4b43-8d78-1ca29482aa86
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.technology
+    - field.storage.commerce_product.field_old
+  module:
+    - commerce_price
+id: commerce_product.technology.field_old
+field_name: field_old
+entity_type: commerce_product
+bundle: technology
+label: 'Old Price'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_currencies:
+    - USD
+field_type: commerce_price

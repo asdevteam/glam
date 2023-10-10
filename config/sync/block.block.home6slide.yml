@@ -1,0 +1,44 @@
+uuid: b48be91c-dfc6-4b47-baf7-2b05fe15585f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_6
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - md_slider
+    - ntv_block_background
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: 'fullscreen-banner p-0 o-hidden'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: home6slide
+theme: oshop
+region: slide
+weight: -45
+provider: null
+plugin: 'md_slider_block:home_6_'
+settings:
+  id: 'md_slider_block:home_6_'
+  label: 'Home 6 Slide'
+  label_display: '0'
+  provider: md_slider
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: home_6

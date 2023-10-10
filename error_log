@@ -1,0 +1,204 @@
+[13-Nov-2018 10:22:26 Europe/Berlin] Uncaught PHP Exception Drupal\Core\Database\DatabaseExceptionWrapper: "SQLSTATE[40001]: Serialization failure: 1213 Deadlock found when trying to get lock; try restarting transaction: INSERT INTO {cache_config} (cid, expire, created, tags, checksum, data, serialized) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6), (:db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9, :db_insert_placeholder_10, :db_insert_placeholder_11, :db_insert_placeholder_12, :db_insert_placeholder_13), (:db_insert_placeholder_14, :db_insert_placeholder_15, :db_insert_placeholder_16, :db_insert_placeholder_17, :db_insert_placeholder_18, :db_insert_placeholder_19, :db_insert_placeholder_20), (:db_insert_placeholder_21, :db_insert_placeholder_22, :db_insert_placeholder_23, :db_insert_placeholder_24, :db_insert_placeholder_25, :db_insert_placeholder_26, :db_insert_placeholder_27), (:db_insert_placeholder_28, :db_insert_placeholder_29, :db_insert_placeholder_30, :db_insert_placeholder_31, :db_insert_placeholder_32, :db_insert_placeholder_33, :db_insert_placeholder_34), (:db_insert_placeholder_35, :db_insert_placeholder_36, :db_insert_placeholder_37, :db_insert_placeholder_38, :db_insert_placeholder_39, :db_insert_placeholder_40, :db_insert_placeholder_41), (:db_insert_placeholder_42, :db_insert_placeholder_43, :db_insert_placeholder_44, :db_insert_placeholder_45, :db_insert_placeholder_46, :db_insert_placeholder_47, :db_insert_placeholder_48), (:db_insert_placeholder_49, :db_insert_placeholder_50, :db_insert_placeholder_51, :db_insert_placeholder_52, :db_insert_placeholder_53, :db_insert_placeholder_54, :db_insert_placeholder_55), (:db_insert_placeholder_56, :db_insert_placeholder_57, :db_insert_placeholder_58, :db_insert_placeholder_59, :db_insert_placeholder_60, :db_insert_placeholder_61, :db_insert_placeholder_62), (:db_insert_placeholder_63, :db_insert_placeholder_64, :db_insert_placeholder_65, :db_insert_placeholder_66, :db_insert_placeholder_67, :db_insert_placeholder_68, :db_insert_placeholder_69), (:db_insert_placeholder_70, :db_insert_placeholder_71, :db_insert_placeholder_72, :db_insert_placeholder_73, :db_insert_placeholder_74, :db_insert_placeholder_75, :db_insert_placeholder_76), (:db_insert_placeholder_77, :db_insert_placeholder_78, :db_insert_placeholder_79, :db_insert_placeholder_80, :db_insert_placeholder_81, :db_insert_placeholder_82, :db_insert_placeholder_83), (:db_insert_placeholder_84, :db_insert_placeholder_85, :db_insert_placeholder_86, :db_insert_placeholder_87, :db_insert_placeholder_88, :db_insert_placeholder_89, :db_insert_placeholder_90), (:db_insert_placeholder_91, :db_insert_placeholder_92, :db_insert_placeholder_93, :db_insert_placeholder_94, :db_insert_placeholder_95, :db_insert_placeholder_96, :db_insert_placeholder_97), (:db_insert_placeholder_98, :db_insert_placeholder_99, :db_insert_placeholder_100, :db_insert_placeholder_101, :db_insert_placeholder_102, :db_insert_placeholder_103, :db_insert_placeholder_104), (:db_insert_placeholder_105, :db_insert_placeholder_106, :db_insert_placeholder_107, :db_insert_placeholder_108, :db_insert_placeholder_109, :db_insert_placeholder_110, :db_insert_placeholder_111), (:db_insert_placeholder_112, :db_insert_placeholder_113, :db_insert_placeholder_114, :db_insert_placeholder_115, :db_insert_placeholder_116, :db_insert_placeholder_117, :db_insert_placeholder_118), (:db_insert_placeholder_119, :db_insert_placeholder_120, :db_insert_placeholder_121, :db_insert_placeholder_122, :db_insert_placeholder_123, :db_insert_placeholder_124, :db_insert_placeholder_125), (:db_insert_placeholder_126, :db_insert_placeholder_127, :db_insert_placeholder_128, :db_insert_placeholder_129, :db_insert_placeholder_130, :db_insert_placeholder_131, :db_insert_placeholder_132), (:db_insert_placeholder_133, :db_insert_placeholder_134, :db_insert_placeholder_135, :db_insert_placeholder_136, :db_insert_placeholder_137, :db_insert_placeholder_138, :db_insert_placeholder_139) ON DUPLICATE KEY UPDATE cid = VALUES(cid), expire = VALUES(expire), created = VALUES(created), tags = VALUES(tags), checksum = VALUES(checksum), data = VALUES(data), serialized = VALUES(serialized); Array
+(
+    [:db_insert_placeholder_0] => core.base_field_override.node.feuture.nid
+    [:db_insert_placeholder_1] => -1
+    [:db_insert_placeholder_2] => 1542100946.787
+    [:db_insert_placeholder_3] => 
+    [:db_insert_placeholder_4] => 0
+    [:db_insert_placeholder_5] => b:0;
+    [:db_insert_placeholder_6] => 1
+    [:db_insert_placeholder_7] => core.base_field_override.node.feuture.uuid
+    [:db_insert_placeholder_8] => -1
+    [:db_insert_placeholder_9] => 1542100946.787
+    [:db_insert_placeholder_10] => 
+    [:db_insert_placeholder_11] => 0
+    [:db_insert_placeholder_12] => b:0;
+    [:db_insert_placeholder_13] => 1
+    [:db_insert_placeholder_14] => core.base_field_override.node.feuture.vid
+    [:db_insert_placeholder_15] => -1
+    [:db_insert_placeholder_16] => 1542100946.787
+    [:db_insert_placeholder_17] => 
+    [:db_insert_placeholder_18] => 0
+    [:db_insert_placeholder_19] => b:0;
+    [:db_insert_placeholder_20] => 1
+    [:db_insert_placeholder_21] => core.base_field_override.node.feuture.langcode
+    [:db_insert_placeholder_22] => -1
+    [:db_insert_placeholder_23] => 1542100946.787
+    [:db_insert_placeholder_24] => 
+    [:db_insert_placeholder_25] => 0
+    [:db_insert_placeholder_26] => b:0;
+    [:db_insert_placeholder_27] => 1
+    [:db_insert_placeholder_28] => core.base_field_override.node.feuture.type
+    [:db_insert_placeholder_29] => -1
+    [:db_insert_placeholder_30] => 1542100946.787
+    [:db_insert_placeholder_31] => 
+    [:db_insert_placeholder_32] => 0
+    [:db_insert_placeholder_33] => b:0;
+    [:db_insert_placeholder_34] => 1
+    [:db_insert_placeholder_35] => core.base_field_override.node.feuture.revision_timestamp
+    [:db_insert_placeholder_36] => -1
+    [:db_insert_placeholder_37] => 1542100946.787
+    [:db_insert_placeholder_38] => 
+    [:db_insert_placeholder_39] => 0
+    [:db_insert_placeholder_40] => b:0;
+    [:db_insert_placeholder_41] => 1
+    [:db_insert_placeholder_42] => core.base_field_override.node.feuture.revision_uid
+    [:db_insert_placeholder_43] => -1
+    [:db_insert_placeholder_44] => 1542100946.787
+    [:db_insert_placeholder_45] => 
+    [:db_insert_placeholder_46] => 0
+    [:db_insert_placeholder_47] => b:0;
+    [:db_insert_placeholder_48] => 1
+    [:db_insert_placeholder_49] => core.base_field_override.node.feuture.revision_log
+    [:db_insert_placeholder_50] => -1
+    [:db_insert_placeholder_51] => 1542100946.787
+    [:db_insert_placeholder_52] => 
+    [:db_insert_placeholder_53] => 0
+    [:db_insert_placeholder_54] => b:0;
+    [:db_insert_placeholder_55] => 1
+    [:db_insert_placeholder_56] => core.base_field_override.node.feuture.status
+    [:db_insert_placeholder_57] => -1
+    [:db_insert_placeholder_58] => 1542100946.787
+    [:db_insert_placeholder_59] => 
+    [:db_insert_placeholder_60] => 0
+    [:db_insert_placeholder_61] => b:0;
+    [:db_insert_placeholder_62] => 1
+    [:db_insert_placeholder_63] => core.base_field_override.node.feuture.title
+    [:db_insert_placeholder_64] => -1
+    [:db_insert_placeholder_65] => 1542100946.787
+    [:db_insert_placeholder_66] => 
+    [:db_insert_placeholder_67] => 0
+    [:db_insert_placeholder_68] => b:0;
+    [:db_insert_placeholder_69] => 1
+    [:db_insert_placeholder_70] => core.base_field_override.node.feuture.uid
+    [:db_insert_placeholder_71] => -1
+    [:db_insert_placeholder_72] => 1542100946.787
+    [:db_insert_placeholder_73] => 
+    [:db_insert_placeholder_74] => 0
+    [:db_insert_placeholder_75] => b:0;
+    [:db_insert_placeholder_76] => 1
+    [:db_insert_placeholder_77] => core.base_field_override.node.feuture.created
+    [:db_insert_placeholder_78] => -1
+    [:db_insert_placeholder_79] => 1542100946.787
+    [:db_insert_placeholder_80] => 
+    [:db_insert_placeholder_81] => 0
+    [:db_insert_placeholder_82] => b:0;
+    [:db_insert_placeholder_83] => 1
+    [:db_insert_placeholder_84] => core.base_field_override.node.feuture.changed
+    [:db_insert_placeholder_85] => -1
+    [:db_insert_placeholder_86] => 1542100946.787
+    [:db_insert_placeholder_87] => 
+    [:db_insert_placeholder_88] => 0
+    [:db_insert_placeholder_89] => b:0;
+    [:db_insert_placeholder_90] => 1
+    [:db_insert_placeholder_91] => core.base_field_override.node.feuture.promote
+    [:db_insert_placeholder_92] => -1
+    [:db_insert_placeholder_93] => 1542100946.787
+    [:db_insert_placeholder_94] => 
+    [:db_insert_placeholder_95] => 0
+    [:db_insert_placeholder_96] => a:16:{s:4:"uuid";s:36:"d6ff1b19-511d-459b-bc73-c483bc4c24a4";s:8:"langcode";s:2:"en";s:6:"status";b:1;s:12:"dependencies";a:1:{s:6:"config";a:1:{i:0;s:17:"node.type.feuture";}}s:2:"id";s:20:"node.feuture.promote";s:10:"field_name";s:7:"promote";s:11:"entity_type";s:4:"node";s:6:"bundle";s:7:"feuture";s:5:"label";s:22:"Promoted to front page";s:11:"description";s:0:"";s:8:"required";b:0;s:12:"translatable";b:1;s:13:"default_value";a:1:{i:0;a:1:{s:5:"value";i:0;}}s:22:"default_value_callback";s:0:"";s:8:"settings";a:2:{s:8:"on_label";s:2:"On";s:9:"off_label";s:3:"Off";}s:10:"field_type";s:7:"boolean";}
+    [:db_insert_placeholder_97] => 1
+    [:db_insert_placeholder_98] => core.base_field_override.node.feuture.sticky
+    [:db_insert_placeholder_99] => -1
+    [:db_insert_placeholder_100] => 1542100946.787
+    [:db_insert_placeholder_101] => 
+    [:db_insert_placeholder_102] => 0
+    [:db_insert_placeholder_103] => b:0;
+    [:db_insert_placeholder_104] => 1
+    [:db_insert_placeholder_105] => core.base_field_override.node.feuture.default_langcode
+    [:db_insert_placeholder_106] => -1
+    [:db_insert_placeholder_107] => 1542100946.787
+    [:db_insert_placeholder_108] => 
+    [:db_insert_placeholder_109] => 0
+    [:db_insert_placeholder_110] => b:0;
+    [:db_insert_placeholder_111] => 1
+    [:db_insert_placeholder_112] => core.base_field_override.node.feuture.revision_default
+    [:db_insert_placeholder_113] => -1
+    [:db_insert_placeholder_114] => 1542100946.787
+    [:db_insert_placeholder_115] => 
+    [:db_insert_placeholder_116] => 0
+    [:db_insert_placeholder_117] => b:0;
+    [:db_insert_placeholder_118] => 1
+    [:db_insert_placeholder_119] => core.base_field_override.node.feuture.revision_translation_affected
+    [:db_insert_placeholder_120] => -1
+    [:db_insert_placeholder_121] => 1542100946.787
+    [:db_insert_placeholder_122] => 
+    [:db_insert_placeholder_123] => 0
+    [:db_insert_placeholder_124] => b:0;
+    [:db_insert_placeholder_125] => 1
+    [:db_insert_placeholder_126] => core.base_field_override.node.feuture.path
+    [:db_insert_placeholder_127] => -1
+    [:db_insert_placeholder_128] => 1542100946.787
+    [:db_insert_placeholder_129] => 
+    [:db_insert_placeholder_130] => 0
+    [:db_insert_placeholder_131] => b:0;
+    [:db_insert_placeholder_132] => 1
+    [:db_insert_placeholder_133] => core.base_field_override.node.feuture.menu_link
+    [:db_insert_placeholder_134] => -1
+    [:db_insert_placeholder_135] => 1542100946.787
+    [:db_insert_placeholder_136] => 
+    [:db_insert_placeholder_137] => 0
+    [:db_insert_placeholder_138] => b:0;
+    [:db_insert_placeholder_139] => 1
+)
+" at /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Connection.php line 686
+[14-Nov-2018 08:39:20 UTC] PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php on line 79 #0 /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Driver/mysql/Connection.php(420): PDO->__construct('mysql:host=loca...', 'vunt_oshop', 'iAlDX63htX(&', Array)
+#1 /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Database.php(371): Drupal\Core\Database\Driver\mysql\Connection::open(Array)
+#2 /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Database.php(166): Drupal\Core\Database\Database::openConnection('default', 'default')
+#3 [internal function]: Drupal\Core\Database\Database::getConnection('default')
+#4 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php(79): call_user_func_array('Drupal\\Core\\Dat...', Array)
+#5 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/Container.php(171): Drupal\Component\DependencyInjection\PhpArrayContainer->createService(Array, 'database')
+#6 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php(260): Drupal\Component\DependencyInjection\Container->get('database', 1)
+#7 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php(62): Drupal\Component\DependencyInjection\PhpArrayContainer->resolveServicesAndParameters(Array)
+#8 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/Container.php(171): Drupal\Component\DependencyInjection\PhpArrayContainer->createService(Array, 'cache.container')
+#9 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(515): Drupal\Component\DependencyInjection\Container->get('cache.container')
+#10 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(876): Drupal\Core\DrupalKernel->getCachedContainerDefinition()
+#11 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(468): Drupal\Core\DrupalKernel->initializeContainer()
+#12 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(664): Drupal\Core\DrupalKernel->boot()
+#13 /home/vunt/public_html/oshop/index.php(19): Drupal\Core\DrupalKernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#14 {main}
+[14-Nov-2018 08:39:23 UTC] PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php on line 79 #0 /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Driver/mysql/Connection.php(420): PDO->__construct('mysql:host=loca...', 'vunt_oshop', 'iAlDX63htX(&', Array)
+#1 /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Database.php(371): Drupal\Core\Database\Driver\mysql\Connection::open(Array)
+#2 /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Database.php(166): Drupal\Core\Database\Database::openConnection('default', 'default')
+#3 [internal function]: Drupal\Core\Database\Database::getConnection('default')
+#4 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php(79): call_user_func_array('Drupal\\Core\\Dat...', Array)
+#5 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/Container.php(171): Drupal\Component\DependencyInjection\PhpArrayContainer->createService(Array, 'database')
+#6 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php(260): Drupal\Component\DependencyInjection\Container->get('database', 1)
+#7 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php(62): Drupal\Component\DependencyInjection\PhpArrayContainer->resolveServicesAndParameters(Array)
+#8 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/Container.php(171): Drupal\Component\DependencyInjection\PhpArrayContainer->createService(Array, 'cache.container')
+#9 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(515): Drupal\Component\DependencyInjection\Container->get('cache.container')
+#10 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(876): Drupal\Core\DrupalKernel->getCachedContainerDefinition()
+#11 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(468): Drupal\Core\DrupalKernel->initializeContainer()
+#12 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(664): Drupal\Core\DrupalKernel->boot()
+#13 /home/vunt/public_html/oshop/index.php(19): Drupal\Core\DrupalKernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#14 {main}
+[14-Nov-2018 08:39:24 UTC] PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php on line 79 #0 /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Driver/mysql/Connection.php(420): PDO->__construct('mysql:host=loca...', 'vunt_oshop', 'iAlDX63htX(&', Array)
+#1 /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Database.php(371): Drupal\Core\Database\Driver\mysql\Connection::open(Array)
+#2 /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Database.php(166): Drupal\Core\Database\Database::openConnection('default', 'default')
+#3 [internal function]: Drupal\Core\Database\Database::getConnection('default')
+#4 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php(79): call_user_func_array('Drupal\\Core\\Dat...', Array)
+#5 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/Container.php(171): Drupal\Component\DependencyInjection\PhpArrayContainer->createService(Array, 'database')
+#6 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php(260): Drupal\Component\DependencyInjection\Container->get('database', 1)
+#7 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php(62): Drupal\Component\DependencyInjection\PhpArrayContainer->resolveServicesAndParameters(Array)
+#8 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/Container.php(171): Drupal\Component\DependencyInjection\PhpArrayContainer->createService(Array, 'cache.container')
+#9 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(515): Drupal\Component\DependencyInjection\Container->get('cache.container')
+#10 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(876): Drupal\Core\DrupalKernel->getCachedContainerDefinition()
+#11 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(468): Drupal\Core\DrupalKernel->initializeContainer()
+#12 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(664): Drupal\Core\DrupalKernel->boot()
+#13 /home/vunt/public_html/oshop/index.php(19): Drupal\Core\DrupalKernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#14 {main}
+[14-Nov-2018 08:39:25 UTC] PDOException: SQLSTATE[HY000] [2002] Connection refused in /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php on line 79 #0 /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Driver/mysql/Connection.php(420): PDO->__construct('mysql:host=loca...', 'vunt_oshop', 'iAlDX63htX(&', Array)
+#1 /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Database.php(371): Drupal\Core\Database\Driver\mysql\Connection::open(Array)
+#2 /home/vunt/public_html/oshop/core/lib/Drupal/Core/Database/Database.php(166): Drupal\Core\Database\Database::openConnection('default', 'default')
+#3 [internal function]: Drupal\Core\Database\Database::getConnection('default')
+#4 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php(79): call_user_func_array('Drupal\\Core\\Dat...', Array)
+#5 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/Container.php(171): Drupal\Component\DependencyInjection\PhpArrayContainer->createService(Array, 'database')
+#6 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php(260): Drupal\Component\DependencyInjection\Container->get('database', 1)
+#7 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php(62): Drupal\Component\DependencyInjection\PhpArrayContainer->resolveServicesAndParameters(Array)
+#8 /home/vunt/public_html/oshop/core/lib/Drupal/Component/DependencyInjection/Container.php(171): Drupal\Component\DependencyInjection\PhpArrayContainer->createService(Array, 'cache.container')
+#9 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(515): Drupal\Component\DependencyInjection\Container->get('cache.container')
+#10 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(876): Drupal\Core\DrupalKernel->getCachedContainerDefinition()
+#11 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(468): Drupal\Core\DrupalKernel->initializeContainer()
+#12 /home/vunt/public_html/oshop/core/lib/Drupal/Core/DrupalKernel.php(664): Drupal\Core\DrupalKernel->boot()
+#13 /home/vunt/public_html/oshop/index.php(19): Drupal\Core\DrupalKernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#14 {main}

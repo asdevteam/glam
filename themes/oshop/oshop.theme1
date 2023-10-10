@@ -1,0 +1,423 @@
+<?php
+global $base_url;
+global $head_title;
+global $product_entity;
+global $region1;
+global $view;
+global $header_style;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\Core\Form\FormBase;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\UrlHelper;
+use Drupal\Core\Asset\AttachedAssetsInterface;
+use Drupal\block\Entity\Block;
+
+function oshop_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+    $elements = $variables['elements'];
+    
+    if(isset($variables['elements']['#plugin_id']) && !empty($variables['elements']['#plugin_id'])){
+        $block_plugin_id = $variables['elements']['#plugin_id'];
+        $block_plugin_id = $block_plugin_id . 'all';
+        $suggestions[] = 'block--'.$block_plugin_id;
+    }
+     // Block suggestions for custom block bundles. 
+    if (isset($variables['elements']['content']['#block_content'])) { 
+        array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle()); 
+    }
+}
+
+function oshop_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+    if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
+        $term_id = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
+        $term = taxonomy_term_load($term_id);
+        //$term_name = $term_object->get('name')->value;
+        $vname = $term->vid->getValue()[0]['target_id'];
+        $suggestions[] = 'node__taxanomy__' . $vname;
+    }
+} 
+
+function oshop_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $suggestions[] = 'page__node__' . $node->getType();
+    }
+
+    if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
+        $term_id = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
+        $term = taxonomy_term_load($term_id);
+        //$term_name = $term_object->get('name')->value;
+        $vname = $term->vid->getValue()[0]['target_id'];
+        $suggestions[] = 'page__taxanomy__' . $vname;
+    }
+}
+function oshop_theme_suggestions_input_alter(&$suggestions, array $variables) {
+    global $region1;
+
+    $element = $variables['element'];
+    if (isset($element['#attributes']['data-twig-suggestion'])) {
+    // kint($element);
+        $suggestions[] = 'input__' . $element['#type'] . '__' . $element['#attributes']['data-twig-suggestion'];
+    }
+    // elseif (isset($element['#attributes']['data-webform-submit']) && ($region1=="section") ) 
+    // {
+    //     $suggestions[] = 'input__' . $element['#type'] . '__section__' . $element['#attributes']['data-webform-submit'];
+    // }
+    // elseif (isset($element['#attributes']['data-webform-submit']))
+    // {
+    //     $suggestions[] = 'input__' . $element['#type'] . '__' . $element['#attributes']['data-webform-submit'];
+    // }
+ 
+
+    // elseif (isset($element['#attributes']['data-simplenews-submit'])){
+    //     $suggestions[] = 'input__' . $element['#type'] . '__' . $element['#attributes']['data-simplenews-submit'];
+    // }
+}
+
+
+function oshop_preprocess_block(&$variables) {
+    
+    global $base_url;
+    global $region1;
+    switch ($variables['base_plugin_id']) {
+        case 'system_branding_block':
+            $variables['site_logo'] = '';
+            if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
+                $variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
+            }
+            break;
+    }
+
+
+    if (isset($variables['elements']['#id']) && !empty($variables['elements']['#id'])) {
+        $block_id   = $variables['elements']['#id'];
+        $block      = \Drupal\block\Entity\Block::load($block_id);
+        if ($block->getRegion()) {
+            $region = $block->getRegion();
+            $variables['region'] = $region;
+            $region1 =  $variables['region'];
+        }
+        //config as context module
+    } else {
+        $variables['region'] = $variables['elements']['#configuration']['region'];
+        $region1 =  $variables['region'];
+    }
+}
+function oshop_form_search_block_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+    global $region1;
+    global $header_style;
+
+   // unset($form['search_block_form']['#title']); // remove label form
+    if( $header_style == 'header6') {
+        $form['keys']['#attributes']['placeholder'][] = t('Search...');
+    }else
+    {
+        $form['keys']['#attributes']['placeholder'][] = t('Hit enter to search or ESC to close');
+    }
+    //kint($form);
+    $form['keys']['#attributes']['class'][] = t('search-input');
+    //$form['actions']['submit']['#value'] = t(''); // Change the text on the submit button
+   // $form['#attributes']['class'] = array('sidebar-search widget-margin');
+    //$form['actions']['submit']['#attributes']['data-webform-submit'] = 'search_submit';
+
+}
+
+
+function oshop_preprocess_node(&$variables) {
+     global $base_root, $base_url;
+    $variables['base_url'] = $base_url;
+
+    $variables['base_root'] = $base_root;
+    $ntype = $variables['node']->getType();
+    $site_name = \Drupal::config('system.site')->get('name');
+    $variables['site_name'] = $site_name;
+    $request = \Drupal::request();
+
+    if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+        $variables['title'] = \Drupal::service('title_resolver')->getTitle($request, $route);
+    }
+    if ($ntype == 'blog_post') {
+        $created_time = $variables['node']->changed->value;
+        $variables['link_next_por'] = generateNextPrevious('next', $created_time, 'blog_post');
+        $variables['link_prev_por'] = generateNextPrevious('prev', $created_time, 'blog_post');
+    }   
+    if ($ntype == 'project') {
+        $created_time = $variables['node']->changed->value;
+        $variables['link_next_por'] = generateNextPrevious('next', $created_time, 'project');
+        $variables['link_prev_por'] = generateNextPrevious('prev', $created_time, 'project');
+    }  
+   
+}
+
+
+/**
+ * Implements template_preprocess_html().
+ */
+function oshop_preprocess_html(&$variables) {
+
+    global $base_url, $head_title;
+    $variables['choose_color']   = theme_get_setting('choose_color', 'oshop');
+    $head_title = $variables['head_title'];
+    $theme      = \Drupal::theme()->getActiveTheme()->getName();
+    $variables['attributes']['class'][] = 'ltr';
+    $variables['general_setting_tracking_code'] = theme_get_setting('general_setting_tracking_code', $theme);
+    $variables['custom_css'] = theme_get_setting('custom_css', $theme);
+    $node       = \Drupal::routeMatch()->getParameter('node');
+    $variables['theme_path'] = drupal_get_path('theme', $theme);
+    /*$variables['#attached']['library'][] = 'oshop/oshop-lib';*/
+    $variables['#attached']['drupalSettings']['path']['themeUrl'] = base_path().\Drupal::theme()->getActiveTheme()->getPath();
+    $variables['#attached']['drupalSettings']['style'] =  $variables['choose_color'];
+    $variables['#attached']['drupalSettings']['logojs'] =  $variables['logo'];
+    $variables['#attached']['drupalSettings']['pathjs'] =  base_path();
+}
+
+
+/**
+ * Implements template_preprocess_page().
+ */
+function oshop_preprocess_page(&$variables) {
+
+    global $base_root, $base_url,$view;
+
+    $node   = \Drupal::routeMatch()->getParameter('node');
+    $theme  = \Drupal::theme()->getActiveTheme()->getName();
+    $variables['theme_path'] = drupal_get_path('theme', $theme);
+    $variables['base_url'] = $base_url;
+    $request = \Drupal::request();
+
+    if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+        $variables['title'] = \Drupal::service('title_resolver')->getTitle($request, $route);
+    }
+        
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $variables['type'] = $node->getType();
+    }
+    $view = views_get_current_view();
+
+  
+}
+
+
+
+
+
+function oshop_preprocess(&$variables){
+     global $header_style;
+   global $product_entity;
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+    $variables['type'] = '';
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $variables['type'] = $node->getType();
+    }
+
+    // xóa cache của url
+    $variables['#cache']['contexts'][] = 'url';
+   
+    $variables['coppy_right']  = theme_get_setting('coppy_right','oshop'); 
+    $variables['blog_layout']     = theme_get_setting('blog_layout', 'oshop');
+    $variables['blog_sidebar']     = theme_get_setting('blog_sidebar', 'oshop');
+    $variables['blog_subtitle']     = theme_get_setting('blog_subtitle', 'oshop');
+    $variables['text_inside']     = theme_get_setting('text_inside', 'oshop');
+    $variables['sharelink']     = theme_get_setting('sharelink', 'oshop');
+    $variables['logo'] = theme_get_setting('logo.url','oshop');
+    $variables['header_style']   = theme_get_setting('header_layout', 'oshop');
+    $variables['service_sidebar']     = theme_get_setting('service_sidebar', 'oshop');
+    $variables['shop_sidebar']     = theme_get_setting('shop_sidebar', 'oshop');
+    $variables['shop_detail']     = theme_get_setting('shop_detail', 'oshop');
+    $variables['copyright']   = theme_get_setting('copyright', 'oshop');
+    $variables['phone_number']   = theme_get_setting('phone_number', 'oshop');
+    $variables['color_header']   = theme_get_setting('color_header', 'oshop');
+    $variables['color_footer']   = theme_get_setting('color_footer', 'oshop');
+    $variables['choose_color']   = theme_get_setting('choose_color', 'oshop');
+    $variables['shop_layout']   = theme_get_setting('shop_layout', 'oshop');
+    $variables['contact_layout']   = theme_get_setting('contact_layout', 'oshop');
+    $variables['email']   = theme_get_setting('email', 'oshop');
+    $header_style = $variables['header_style'];
+    $pageURL = 'http';  
+    if(!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'){
+        $pageURL .= "s";
+    }
+    $pageURL .= '://';
+    if($_SERVER['SERVER_PORT'] != '80'){
+    $pageURL .= $_SERVER['SERVER_NAME'].":".$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI'];
+    }else{
+        $pageURL .= $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+    }
+    $variables['pageURL'] = $pageURL;
+
+    if (isset( $_GET['layout'] )){
+        $variables['blog_layout']   = $_GET['layout'];
+        $variables['shop_layout']   = $_GET['layout'];
+        $variables['contact_layout']   = $_GET['layout'];
+        
+    }
+    if (isset( $_GET['sidebar'] )){
+      
+        $variables['shop_sidebar']  = $_GET['sidebar'];
+        $variables['blog_sidebar']  = $_GET['sidebar'];
+    }
+    if(isset($_GET['style']))
+    {
+        $variables['header_style'] = $_GET['style'];
+        $header_style = $variables['header_style'];
+    }
+
+    $background = theme_get_setting('default_breadcrumb_image', 'oshop');
+    if (!empty($background)) {
+        $file   = file_load($background[0]);
+        $uri    = $file->getFileUri();
+        $path   = file_create_url($uri);
+        $variables['theme_page_header_bg'] = $path;
+    } else {
+        $variables['theme_page_header_bg'] = '';
+    }
+
+    $ftbackground = theme_get_setting('footer_bg_image', 'oshop');
+    if (!empty($ftbackground)) {
+        $file   = file_load($ftbackground[0]);
+        $uri    = $file->getFileUri();
+        $path   = file_create_url($uri);
+        $variables['footer_bg_image_path'] = $path;
+    } else {
+        $variables['footer_bg_image_path'] = '';
+    }
+    if(\Drupal::routeMatch()->getParameter('node')){
+        $node = \Drupal::routeMatch()->getParameter('node');
+        if (isset($node->field_header_style) && !empty($node->field_header_style->getValue()[0]['value'])) {
+            $variables['header_style'] = $node->field_header_style->getValue()[0]['value'];
+        }
+    }
+
+
+
+}
+
+
+function oshop_preprocess_breadcrumb(&$variables) {
+    global $head_title;
+    if ($variables['breadcrumb'] && isset($head_title['title'])) {
+        $variables['breadcrumb'][] = array(
+            'text' => $head_title['title'],
+        );
+    }
+}
+function generateNextPrevious($direction = 'next', $created_time, $content_type) {
+
+    if ($direction === 'next') {
+        $comparison_opperator = '>';
+        $sort = 'ASC';
+    } elseif ($direction === 'prev') {
+        $comparison_opperator = '<';
+        $sort = 'DESC';
+    }
+
+    //Lookup 1 node younger (or older) than the current node
+    $query = \Drupal::entityQuery('node');
+    $next = $query->condition('changed', $created_time, $comparison_opperator)
+            ->condition('type', $content_type)
+            ->condition('status', 1)
+            ->sort('changed', $sort)
+            ->range(0, 1)
+            ->execute();
+
+    //If this is not the youngest (or oldest) node
+    if (!empty($next) && is_array($next)) {
+        $next = array_values($next);
+        $next = $next[0];
+
+        //Find the alias of the next node
+        $next_url = \Drupal::service('path_alias.manager')->getAliasByPath('/node/' . $next);
+
+        /**
+          Note: In drupal version < 2.0 : $next_url = \Drupal\Core\Url::fromUserInput($next_url);
+          version >=2.0 : $next_url = \Drupal\Core\Url::fromUserInput($next_url)->toString();
+         */
+        $next_url = base_path() . ltrim($next_url, '/');
+        $node = \Drupal\node\Entity\Node::load($next);
+        $title_field = $node->get('title');
+        $title = $title_field->value;
+        //$next_link = '<h5 class="title-2"><a href="' . $next_url .'">'.$title.'</a></h5>';
+        //$next_url = \Drupal\Core\Url::fromUserInput($next_url)->toString();
+        //print $next_url;
+
+
+        return $next_url;
+    }
+}
+
+
+
+function oshop_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+    // if(preg_match('/views_exposed_form/i', $form_id)){
+    //     $form['actions']['submit']['#attributes']['class'] = array('hidden');
+    //     $form['sort_by']['#attributes']['onchange'] = 'if(this.value != 0) { this.form.submit(); }';
+    // }
+    // dpm($form_id);
+    // if (stristr($form_id,"add_to_cart_form")) {
+    // //dpm($form);
+    //     $form['add_to_wishlist']['#weight'] = 99;
+    //   }
+
+    $path = \Drupal::request()->attributes->get('_system_path');
+    $current_uri = \Drupal::request()->getRequestUri();
+    $current_path = \Drupal::service('path.current')->getPath();
+    if(strpos($form['#id'], 'commerce-order-item-add-to-cart-form') !== TRUE ){
+        // print_r($form['actions']['wishlist']);
+        $form['actions']['wishlist']['#attributes']['data-twig-suggestion'] = 'button_wistlist';
+        $form['keys']['#attributes']['data-twig-suggestion'] = $form['#id'];
+        $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'button_add_to_cart';
+        $form['keys']['#attributes']['data-twig-suggestion'] = $form['#id'];
+    }
+
+    if(preg_match('/views_exposed_form/i', $form_id)){
+        $form['actions']['submit']['#attributes']['class'] = array('hidden');
+        $form['sort_by']['#attributes']['onchange'] = 'if(this.value != 0) { this.form.submit(); }';
+        //$form['#attached']['onchange'] = 'if(this.value != 0) { this.form.submit(); }';
+    
+    }elseif(preg_match("/simplenews_subscriptions_block/", $form_id)){
+        $form['mail']['widget'][0]['value']['#attributes']['placeholder'] = t('Email Address');
+        $form['mail']['#attributes']['class'] = array('col-sm-8');
+
+        $form['actions']['subscribe']['#attributes']['class'] = array('btn-white');
+        $form['actions']['#attributes']['class'] = array('col-sm-4 xs-mt-1');
+
+    }
+     if(preg_match('/commerce_order_item_add_to_cart_form_commerce_product/i', $form_id)){
+
+         //$form['actions']['submit']['#attributes']['class'] = array('btn-iconic');
+        // $form['actions']['submit']['#suffix'] = '<i class="fa fa-shopping-cart ml-2"></i>';
+         $form['actions']['submit']['#attributes']['data-twig-suggestion'] = 'button_add_to_cart';
+        $form['keys']['#attributes']['data-twig-suggestion'] = $form['#id'];
+
+    } 
+    
+}
+
+function oshop_form_comment_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+    // unset($form['subject']['widget'][0]['value']['#title']);
+    unset($form['field_comment_body']['widget'][0]['value']['#title']);
+    // unset($form['field_email']['widget'][0]['value']['#title']);
+    // unset($form['field_phone']['widget'][0]['value']['#title']);
+    // unset($form['author']['name']['#title']);
+
+    // if(isset($form['subject']['widget'][0]['value']))
+    //     $form['subject']['widget'][0]['value']['#attributes']['class'] = array('bg-cinput');
+
+    // if(isset($form['author']['name'])){
+    //     $form['author']['name']['#attributes']['placeholder'] = t('Your Name');
+    //     $form['author']['name']['#attributes']['class'] = array('bg-cinput');
+    // }
+    
+    // if(isset($form['field_comment_body']['widget'][0]['value']))
+    //     $form['field_comment_body']['widget'][0]['value']['#attributes']['class'] = array('bg-ctexteria');
+
+    // if(isset($form['field_email']['widget'][0]['value']))
+    //     $form['field_email']['widget'][0]['value']['#attributes']['class'] = array('bg-cinput');
+
+    // if(isset($form['field_phone']['widget'][0]['value']))
+    //     $form['field_phone']['widget'][0]['value']['#attributes']['class'] = array('bg-cinput');    
+
+    $form['actions']['submit']['#attributes']['value'] = 'Comment';
+    //$form['actions']['submit']['#suffix'] = '<i class="fas fa-long-arrow-alt-right"></i>';
+    $form['actions']['submit']['#attributes']['class'] = array('btn btn-theme btn-iconic');
+    unset($form['actions']['preview']);
+}

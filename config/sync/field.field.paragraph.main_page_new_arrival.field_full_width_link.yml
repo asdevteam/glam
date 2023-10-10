@@ -1,0 +1,21 @@
+uuid: d2b5b74e-1b21-454f-a4fd-0049edcbc1d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_full_width_link
+    - paragraphs.paragraphs_type.main_page_new_arrival
+  module:
+    - text
+id: paragraph.main_page_new_arrival.field_full_width_link
+field_name: field_full_width_link
+entity_type: paragraph
+bundle: main_page_new_arrival
+label: 'full width link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

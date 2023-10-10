@@ -1,0 +1,47 @@
+uuid: c30113d5-3bba-4b70-b680-f9d9f6d4fa31
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer-customer-servic
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - system
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: 'col-lg-3 col-md-6 col-sm-6 xs-mt-5 footer-list'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: menufootercustomerservice
+theme: oshop
+region: footer
+weight: -42
+provider: null
+plugin: 'system_menu_block:menu-footer-customer-servic'
+settings:
+  id: 'system_menu_block:menu-footer-customer-servic'
+  label: 'Customer Service'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''

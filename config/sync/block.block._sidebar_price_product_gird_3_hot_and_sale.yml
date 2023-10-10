@@ -1,0 +1,47 @@
+uuid: 4e59c374-24b7-40a5-814d-3bfa9dcd21d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_4
+    - views.view.product_filter_sidebar_price
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: _sidebar_price_product_gird_3_hot_and_sale
+theme: oshop
+region: section
+weight: -25
+provider: null
+plugin: 'views_block:product_filter_sidebar_price-product_gird_3_hot_and_sale'
+settings:
+  id: 'views_block:product_filter_sidebar_price-product_gird_3_hot_and_sale'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: home_4

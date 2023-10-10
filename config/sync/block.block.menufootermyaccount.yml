@@ -1,0 +1,47 @@
+uuid: 9c5842cd-655b-45f1-80b5-31bcb9334162
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer-my-account
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - system
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: 'col-lg-3 col-md-6 col-sm-6 md-mt-5 footer-list'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: menufootermyaccount
+theme: oshop
+region: footer
+weight: -41
+provider: null
+plugin: 'system_menu_block:menu-footer-my-account'
+settings:
+  id: 'system_menu_block:menu-footer-my-account'
+  label: 'My Account'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''

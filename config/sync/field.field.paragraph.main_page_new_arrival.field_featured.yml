@@ -1,0 +1,23 @@
+uuid: 5351995b-9a00-45ad-9a97-b8b582165ac4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured
+    - paragraphs.paragraphs_type.main_page_new_arrival
+id: paragraph.main_page_new_arrival.field_featured
+field_name: field_featured
+entity_type: paragraph
+bundle: main_page_new_arrival
+label: featured
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: b4ea568b-9ca2-4a3b-a0b8-f30754e38f3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.logo_client
+id: node.logo_client.promote
+field_name: promote
+entity_type: node
+bundle: logo_client
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

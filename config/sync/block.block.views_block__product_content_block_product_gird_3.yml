@@ -1,0 +1,47 @@
+uuid: 86671a8f-c75e-4356-ada7-13d4eaf036f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.product_gird_3
+    - views.view.product_content_block
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - views
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: views_block__product_content_block_product_gird_3
+theme: oshop
+region: section
+weight: -19
+provider: null
+plugin: 'views_block:product_content_block-product_gird_3'
+settings:
+  id: 'views_block:product_content_block-product_gird_3'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: product_gird_3

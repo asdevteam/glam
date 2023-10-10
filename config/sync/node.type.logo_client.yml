@@ -1,0 +1,17 @@
+uuid: fdc2ee99-8a8d-4544-b127-159ebf914d29
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Logo Client'
+type: logo_client
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

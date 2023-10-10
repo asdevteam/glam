@@ -1,0 +1,19 @@
+uuid: 4bdf0c6e-1907-42fd-82c8-460115e6afd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_discription_long
+    - paragraphs.paragraphs_type.delivery_shipping_return
+id: paragraph.delivery_shipping_return.field_discription_long
+field_name: field_discription_long
+entity_type: paragraph
+bundle: delivery_shipping_return
+label: discription
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

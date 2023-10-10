@@ -1,0 +1,27 @@
+uuid: f910db1a-1a07-490c-bd69-873c327550fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.color
+    - field.field.commerce_product_attribute_value.color.field_color
+  module:
+    - color_field
+id: commerce_product_attribute_value.color.default
+targetEntityType: commerce_product_attribute_value
+bundle: color
+mode: default
+content:
+  field_color:
+    type: color_field_formatter_swatch
+    weight: 0
+    region: content
+    label: above
+    settings:
+      shape: parallelogram
+      width: '40'
+      height: '40'
+      opacity: '1'
+    third_party_settings: {  }
+hidden:
+  name: true

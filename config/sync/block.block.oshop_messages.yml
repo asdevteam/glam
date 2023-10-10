@@ -1,0 +1,22 @@
+uuid: 08b810f5-969e-4607-a626-3a8d869a4266
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - oshop
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: oshop_messages
+theme: oshop
+region: content
+weight: -49
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,17 @@
+uuid: 736c0ea0-f5c8-468f-b301-d43a3c810646
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: product_gird_sidebar
+label: 'Product Gird Sidebar'
+logic: and
+conditions:
+  ab444753-bc6a-4d0b-a244-d1d39415e903:
+    id: request_path
+    pages: /node/5
+    negate: false
+    context_mapping: {  }
+    uuid: ab444753-bc6a-4d0b-a244-d1d39415e903
+allow_other_conditions: false

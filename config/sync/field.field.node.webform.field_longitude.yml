@@ -1,0 +1,19 @@
+uuid: 51017156-2478-4bd0-a841-fbcbced1328b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_longitude
+    - node.type.webform
+id: node.webform.field_longitude
+field_name: field_longitude
+entity_type: node
+bundle: webform
+label: Longitude
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

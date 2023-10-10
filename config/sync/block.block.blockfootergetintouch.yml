@@ -1,0 +1,47 @@
+uuid: 8e131d66-5f20-4f6e-8d6f-ec33a013c125
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4a09baac-98b8-4187-a311-9d30c59a8cb8'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: 'col-lg-3 col-md-6 col-sm-6 md-mt-5'
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: blockfootergetintouch
+theme: oshop
+region: footer
+weight: -40
+provider: null
+plugin: 'block_content:4a09baac-98b8-4187-a311-9d30c59a8cb8'
+settings:
+  id: 'block_content:4a09baac-98b8-4187-a311-9d30c59a8cb8'
+  label: 'Get In Touch'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''

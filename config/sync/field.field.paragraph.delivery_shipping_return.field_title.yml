@@ -1,0 +1,19 @@
+uuid: 93ea942b-829b-4359-8406-c868b896da21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.delivery_shipping_return
+id: paragraph.delivery_shipping_return.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: delivery_shipping_return
+label: title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

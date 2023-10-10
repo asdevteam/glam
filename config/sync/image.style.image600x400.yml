@@ -1,0 +1,15 @@
+uuid: 9698e5fa-583e-4dd9-a752-4b2a3dff58fb
+langcode: en
+status: true
+dependencies: {  }
+name: image600x400
+label: image600x400
+effects:
+  1b14e6fc-e233-45a8-b707-812f3c47981c:
+    uuid: 1b14e6fc-e233-45a8-b707-812f3c47981c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      anchor: center-center

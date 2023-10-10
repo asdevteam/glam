@@ -1,0 +1,21 @@
+uuid: 33a582eb-10a7-4ded-bde2-36829229e26e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone
+    - node.type.webform
+  module:
+    - text
+id: node.webform.field_phone
+field_name: field_phone
+entity_type: node
+bundle: webform
+label: Phone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

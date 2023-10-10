@@ -1,0 +1,24 @@
+{% include "@oshop/header.html.twig" %}
+
+<div class="page-content">
+	<section>
+	  <div class="container addbtn addbtn-theme">
+	    <div class="row">
+	      <div class="col-lg-9 col-md-12 order-lg-12">
+	      	{{ page.content }}
+   			{{ page.section }}
+   			{{ drupal_view('product_content_block','product_categories_api')}}
+	      </div>
+		<div class="col-lg-3 col-md-12 order-lg-1 sidebar">
+				{{ page.shop_sidebar}}
+		      
+		 </div>
+		</div>
+	  </div>
+	</section>
+
+   	{{ page.newsletter }}
+</div>
+{% include "@oshop/footer.html.twig" %}
+
+        

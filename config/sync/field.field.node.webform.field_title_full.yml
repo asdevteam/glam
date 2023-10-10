@@ -1,0 +1,21 @@
+uuid: d0331411-9fad-4128-b450-848f618b0c22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_full
+    - node.type.webform
+  module:
+    - text
+id: node.webform.field_title_full
+field_name: field_title_full
+entity_type: node
+bundle: webform
+label: 'Title Form'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,49 @@
+uuid: 10dedf6c-d532-4611-90d9-8f0e331e905e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_3
+  content:
+    - 'block_content:basic:e0804373-b0ac-4fc3-9aa7-2a0e960eb0c8'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: blocktimecounthome3
+theme: oshop
+region: section
+weight: -44
+provider: null
+plugin: 'block_content:e0804373-b0ac-4fc3-9aa7-2a0e960eb0c8'
+settings:
+  id: 'block_content:e0804373-b0ac-4fc3-9aa7-2a0e960eb0c8'
+  label: 'Block TimeCount Home 3'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: home_3

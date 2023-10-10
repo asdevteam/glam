@@ -1,0 +1,8 @@
+uuid: 4f9e8600-0691-477c-85e9-014285686f33
+langcode: en
+status: true
+dependencies: {  }
+id: menu-footer-my-account
+label: 'Menu Footer My Account'
+description: ''
+locked: false

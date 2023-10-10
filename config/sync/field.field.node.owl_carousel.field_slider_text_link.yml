@@ -1,0 +1,23 @@
+uuid: d50d6f6e-7eff-4514-ba4b-989f12a1cc96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_text_link
+    - node.type.owl_carousel
+  module:
+    - link
+id: node.owl_carousel.field_slider_text_link
+field_name: field_slider_text_link
+entity_type: node
+bundle: owl_carousel
+label: 'slider text link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

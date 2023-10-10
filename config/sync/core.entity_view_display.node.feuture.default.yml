@@ -1,0 +1,28 @@
+uuid: 5f58c751-746e-4728-8e27-58df0a999bb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.feuture.body
+    - node.type.feuture
+  module:
+    - text
+    - user
+id: node.feuture.default
+targetEntityType: node
+bundle: feuture
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

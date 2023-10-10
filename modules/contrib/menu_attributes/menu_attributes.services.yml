@@ -1,0 +1,4 @@
+services:
+  menu_attributes.menu_attributes_service:
+    class: Drupal\menu_attributes\MenuAttributesService
+    arguments: ['@entity_type.manager']

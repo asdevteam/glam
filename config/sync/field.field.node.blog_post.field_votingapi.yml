@@ -1,0 +1,28 @@
+uuid: 563632ca-fe44-4a4c-aad5-be162f31a200
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_votingapi
+    - node.type.blog_post
+  module:
+    - votingapi_widgets
+id: node.blog_post.field_votingapi
+field_name: field_votingapi
+entity_type: node
+bundle: blog_post
+label: votingapi
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: '1'
+    value: 0
+default_value_callback: ''
+settings:
+  anonymous_window: '-1'
+  user_window: '-1'
+  result_function: vote_average
+  widget_format: fivestar
+field_type: voting_api_field

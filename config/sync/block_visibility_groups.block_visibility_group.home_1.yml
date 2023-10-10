@@ -1,0 +1,17 @@
+uuid: 04749fa8-66a6-4caf-89b2-188a8a6e1268
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: home_1
+label: 'Home 1'
+logic: and
+conditions:
+  1f9c60c2-ab47-4b35-8f60-074e208c53c4:
+    id: request_path
+    pages: /node/21
+    negate: false
+    context_mapping: {  }
+    uuid: 1f9c60c2-ab47-4b35-8f60-074e208c53c4
+allow_other_conditions: false

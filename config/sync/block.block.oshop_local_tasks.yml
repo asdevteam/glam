@@ -1,0 +1,22 @@
+uuid: e3e669f9-3285-4a93-afdf-34d61b0d1c68
+langcode: en
+status: true
+dependencies:
+  theme:
+    - oshop
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: oshop_local_tasks
+theme: oshop
+region: content
+weight: -50
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

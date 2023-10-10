@@ -1,0 +1,22 @@
+uuid: ffa17b0d-85cf-42f7-8df6-9e90d94c63a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - oshop
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: oshop_help
+theme: oshop
+region: hiden_block
+weight: -1
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

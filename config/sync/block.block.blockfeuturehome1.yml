@@ -1,0 +1,49 @@
+uuid: 64d20feb-5fe2-4b8f-b0ec-bdf2445e2538
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_1
+  content:
+    - 'block_content:basic:1f4f1a9d-066c-4772-a7ef-318195d84a54'
+  module:
+    - block_attributes
+    - block_content
+    - block_visibility_groups
+    - ntv_block_background
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: ''
+    attr_id: ''
+    sub_title: ''
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: blockfeuturehome1
+theme: oshop
+region: section
+weight: 5
+provider: null
+plugin: 'block_content:1f4f1a9d-066c-4772-a7ef-318195d84a54'
+settings:
+  id: 'block_content:1f4f1a9d-066c-4772-a7ef-318195d84a54'
+  label: 'Block feuture Home 1'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: home_1

@@ -1,0 +1,13 @@
+uuid: a0b19838-14f1-4408-9408-4685be266a82
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+  enforced:
+    module:
+      - commerce_order
+id: profile.billing
+label: Billing
+targetEntityType: profile
+cache: true

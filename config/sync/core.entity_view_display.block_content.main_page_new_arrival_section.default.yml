@@ -1,0 +1,45 @@
+uuid: cc33815e-00b6-4026-8c0b-5187e47d3f67
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.main_page_new_arrival_section
+    - field.field.block_content.main_page_new_arrival_section.body
+    - field.field.block_content.main_page_new_arrival_section.field_image_and_discription
+    - field.field.block_content.main_page_new_arrival_section.field_title
+    - field.field.block_content.main_page_new_arrival_section.field_title_2
+  module:
+    - entity_reference_revisions
+id: block_content.main_page_new_arrival_section.default
+targetEntityType: block_content
+bundle: main_page_new_arrival_section
+mode: default
+content:
+  field_image_and_discription:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  body: true
+  search_api_excerpt: true

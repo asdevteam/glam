@@ -1,0 +1,30 @@
+uuid: aecd77ee-898e-400f-9345-8d53a4a395ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.feuture.body
+    - node.type.feuture
+  module:
+    - text
+    - user
+id: node.feuture.teaser
+targetEntityType: node
+bundle: feuture
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

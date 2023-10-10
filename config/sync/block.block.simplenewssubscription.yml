@@ -1,0 +1,48 @@
+uuid: f56fdb62-f1ec-48d8-a29b-89b49d99bc49
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_attributes
+    - block_visibility_groups
+    - ntv_block_background
+    - simplenews
+  theme:
+    - oshop
+third_party_settings:
+  block_attributes:
+    attr_class: 'theme-bg py-5 addbtn'
+    attr_id: ''
+    sub_title: letter
+  ntv_block_background:
+    disable: disable
+    color: '#000000'
+    bg_image: {  }
+    bg_image_type: default
+    bg_repeat: 'no'
+    bg_image_position: ''
+    bg_image_size: ''
+    background_overlay: ''
+id: simplenewssubscription
+theme: oshop
+region: newsletter
+weight: 0
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: News
+  label_display: visible
+  provider: simplenews
+  newsletters: {  }
+  default_newsletters:
+    default: default
+  message: ''
+  show_manage: true
+  unique_id: 59923893-9f0f-4490-895f-1dd4f3fa0be2
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
