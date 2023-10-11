@@ -5,27 +5,14 @@ dependencies:
   content:
     - 'block_content:basic:140e8dba-2ab0-4013-b00b-038fb7197728'
   module:
-    - block_attributes
+
     - block_content
     - block_visibility_groups
-    - ntv_block_background
+
     - system
   theme:
     - oshop
-third_party_settings:
-  block_attributes:
-    attr_class: ''
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
+
 id: blockhome17_3
 theme: oshop
 region: content

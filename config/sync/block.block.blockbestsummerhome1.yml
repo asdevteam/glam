@@ -7,10 +7,10 @@ dependencies:
   content:
     - 'block_content:basic:2ec755d6-072e-4b56-8c11-ea8f6dfcafb9'
   module:
-    - block_attributes
+
     - block_content
     - block_visibility_groups
-    - ntv_block_background
+
   theme:
     - oshop
 third_party_settings:

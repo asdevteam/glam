@@ -6,26 +6,11 @@ dependencies:
     - block_visibility_groups.block_visibility_group.home_4
     - views.view.product_filter_sidebar_price
   module:
-    - block_attributes
     - block_visibility_groups
-    - ntv_block_background
     - views
   theme:
     - oshop
-third_party_settings:
-  block_attributes:
-    attr_class: ''
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
+
 id: _sidebar_price_product_gird_3_hot_and_sale
 theme: oshop
 region: section

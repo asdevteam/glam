@@ -1,0 +1,35 @@
+uuid: 41afc865-231f-4747-afbf-b25fe7f2de2c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:47332e46-59ab-41a6-ade9-abd00359f791'
+  module:
+    - block_content
+    - block_visibility_groups
+    - system
+  theme:
+    - oshop
+id: testblock
+theme: oshop
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:47332e46-59ab-41a6-ade9-abd00359f791'
+settings:
+  id: 'block_content:47332e46-59ab-41a6-ade9-abd00359f791'
+  label: 'test block'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

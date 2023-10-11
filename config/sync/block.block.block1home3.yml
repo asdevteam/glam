@@ -7,10 +7,10 @@ dependencies:
   content:
     - 'block_content:basic:048b3b8a-52a6-4611-9961-15a9337a54f1'
   module:
-    - block_attributes
+
     - block_content
     - block_visibility_groups
-    - ntv_block_background
+
   theme:
     - oshop
 third_party_settings:
@@ -30,7 +30,7 @@ third_party_settings:
 id: block1home3
 theme: oshop
 region: section
-weight: -50
+weight: -49
 provider: null
 plugin: 'block_content:048b3b8a-52a6-4611-9961-15a9337a54f1'
 settings:

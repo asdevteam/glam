@@ -7,30 +7,17 @@ dependencies:
   content:
     - 'block_content:basic:e0804373-b0ac-4fc3-9aa7-2a0e960eb0c8'
   module:
-    - block_attributes
+
     - block_content
     - block_visibility_groups
-    - ntv_block_background
+
   theme:
     - oshop
-third_party_settings:
-  block_attributes:
-    attr_class: ''
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
+
 id: blocktimecounthome3
 theme: oshop
 region: section
-weight: -44
+weight: -43
 provider: null
 plugin: 'block_content:e0804373-b0ac-4fc3-9aa7-2a0e960eb0c8'
 settings:

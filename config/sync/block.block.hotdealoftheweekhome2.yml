@@ -1,36 +1,22 @@
-uuid: 1b56f7b6-89af-402b-b0b4-e793f1f3c9a7
+uuid: d69e3b61-a678-4ccc-ae4e-b0c681562dfd
 langcode: en
 status: true
 dependencies:
-  config:
-    - block_visibility_groups.block_visibility_group.home_2
   content:
     - 'block_content:basic:972813ac-bc19-4bb3-93ee-69e773cfd492'
   module:
-    - block_attributes
+
     - block_content
     - block_visibility_groups
-    - ntv_block_background
+
+    - system
   theme:
     - oshop
-third_party_settings:
-  block_attributes:
-    attr_class: ''
-    attr_id: ''
-    sub_title: ''
-  ntv_block_background:
-    disable: disable
-    color: '#000000'
-    bg_image: {  }
-    bg_image_type: default
-    bg_repeat: 'no'
-    bg_image_position: ''
-    bg_image_size: ''
-    background_overlay: ''
+
 id: hotdealoftheweekhome2
 theme: oshop
 region: section
-weight: -42
+weight: -46
 provider: null
 plugin: 'block_content:972813ac-bc19-4bb3-93ee-69e773cfd492'
 settings:
@@ -45,5 +31,8 @@ visibility:
   condition_group:
     id: condition_group
     negate: false
-    context_mapping: {  }
-    block_visibility_group: home_2
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/26
